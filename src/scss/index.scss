@@ -1,0 +1,57 @@
+$green: #67A72F;
+$white: #FFFFFF;
+$bg-card: #F6F6F6;
+
+.pkmn-container{
+	padding: 5px;
+	background: $bg-card;
+}
+.pkmn-header-card{
+	background-color: $green;
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+	padding: 4px 10px;
+	.pkmn-sex-icon{
+		height: 100%;
+		background: white;
+		width: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-content: center;
+		position: relative;
+		padding-right: 5px;
+		margin-left:13px;
+		&::before{
+			content: '';
+			position: absolute;
+			left: -13px;
+			border: solid;
+			border-color: transparent #FFFFFF transparent transparent;
+			border-width: 30px 13px 0px 0px;
+		}
+	}
+}
+.pkm-img{
+	width: 100px;
+    background: white;
+    border: solid 1px #CCC;
+    box-sizing: border-box;
+}
+.flex-align-center{
+	display: flex;
+	align-items: center;
+}
+
+.pkmn-type{
+	font-size: 12px;
+	border-radius: 4px;
+	padding: 1px 6px;
+	box-sizing: border-box;
+	&.t_dragon{
+		color: $white;
+		background-color: $green;
+
+	}
+}
