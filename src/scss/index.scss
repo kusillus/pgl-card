@@ -1,10 +1,39 @@
 $green: #67A72F;
 $white: #FFFFFF;
 $bg-card: #F6F6F6;
+$grey: #CCC;
+
+// Type table color
+$normal: #aa9;
+$fire:#f42;
+$water:#39f;
+$electric: #fc3;
+$grass:#7c5;
+$ice:#6cf;
+$fighting:#b54;
+$poison:#a59;
+$ground:#db5;
+$flying:#89f;
+
+$psychic:#f59;
+$bug:#ab2;
+$rock:#ba6;
+$gost:#66b;
+$dragon:#76e;
+$dark:#754;
+$steel:#aab;
+$fairy:#e9e;
+
+$title-color:#004689;
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
 
 .pkmn-container{
-	padding: 5px;
 	background: $bg-card;
+	display:flex;
+	flex-flow: row wrap;
 }
 .pkmn-header-card{
 	background-color: $green;
@@ -28,7 +57,7 @@ $bg-card: #F6F6F6;
 			position: absolute;
 			left: -13px;
 			border: solid;
-			border-color: transparent #FFFFFF transparent transparent;
+			border-color: transparent $white transparent transparent;
 			border-width: 30px 13px 0px 0px;
 		}
 	}
@@ -36,16 +65,22 @@ $bg-card: #F6F6F6;
 .pkm-img{
 	width: 100px;
     background: white;
-    border: solid 1px #CCC;
+    border: solid 1px $grey;
     box-sizing: border-box;
 }
 .flex-align-center{
 	display: flex;
 	align-items: center;
 }
+.pa3{
+	padding: 10px;
+}
+.pa2{
+	padding: 5px;
+}
 
 .pkmn-type{
-	font-size: 12px;
+	font-size: 11px;
 	border-radius: 4px;
 	padding: 1px 6px;
 	box-sizing: border-box;
@@ -53,5 +88,188 @@ $bg-card: #F6F6F6;
 		color: $white;
 		background-color: $green;
 
+	}
+	&.t_flying{
+		color: $white;
+		background-color: $green;
+
+	}
+}
+.pkmn-data-card{
+	padding: 5px 0;
+	display: flex;
+}
+.pkmn-moves{
+	padding-left: 5px;
+	.pkmn_move{
+		font-weight: bold;
+		font-size:12px;
+		padding: 5px;
+		margin-top:1px;
+		border-bottom: solid 1px $grey;
+		&:first-child{
+			border-top: solid 1px $grey;
+			margin-top:0;
+		}
+	}
+}
+.pkmn-right{
+	width:100%;
+}
+.pkmn-items-card{
+	display: flex;
+	border: solid 1px #ccc;
+	.pkmn-ability, .pkmn-item{
+		font-size: 12px;
+		padding: 5px;
+	}
+	.pkmn-ability{
+		border-right: solid 1px #ccc;
+		border-bottom: solid 1px #ccc;
+	}
+	.pkmn-item-img{
+		width: 30px;
+	}
+}
+
+.pkmn-title-bold{
+	font-weight:bold;
+	color: $title-color;
+}
+
+.pl2{
+	padding-left:5px;
+}
+
+
+.bt_{
+	&normal{
+		border-right: solid 4px $normal;
+
+	}
+	&fire{
+		border-right: solid 4px $fire;
+
+	}
+	&water{
+		border-right: solid 4px $water;
+
+	}
+	&electric{
+		border-right: solid 4px $electric;
+
+	}
+	&grass{
+		border-right: solid 4px $grass;
+
+	}
+	&ice{
+		border-right: solid 4px $ice;
+
+	}
+	&fighting{
+		border-right: solid 4px $fighting;
+
+	}
+	&poison{
+		border-right: solid 4px $poison;
+
+	}
+	&ground{
+		border-right: solid 4px $ground;
+
+	}
+	&flying{
+		border-right: solid 4px $flying;
+
+	}
+	&psychic{
+		border-right: solid 4px $psychic;
+
+	}
+	&bug{
+		border-right: solid 4px $bug;
+
+	}
+	&rock{
+		border-right: solid 4px $rock;
+
+	}
+	&gost{
+		border-right: solid 4px $gost;
+
+	}
+	&dragon{
+		border-right: solid 4px $dragon;
+
+	}
+	&dark{
+		border-right: solid 4px $dark;
+
+	}
+	&steel{
+		border-right: solid 4px $steel;
+
+	}
+	&fairy{
+		border-right: solid 4px $fairy;
+
+	}
+}
+
+.pkmn-stats-card{
+	display: flex;
+	font-size: 12px;
+	.pkmn_col{
+		div{
+			padding: 5px;
+			border-bottom: solid 1px #ccc;
+			&:first-child, &:last-child{
+				border-bottom: none;
+			}
+		}
+		&.title_stats{
+				div:first-child{
+					height: 14px;
+				}
+			}
+	}
+}
+
+.pkmn-title-statistics{
+	font-size: 16px;
+	color: #fff;
+	padding: 5px;
+	border-bottom: solid 2px;
+	display: flex;
+	align-items: center;
+	background-color: #67a72f;
+}
+.w_100{
+	width: 100%;
+}
+.t_right{
+	text-align: right;
+}
+.title_stats{
+	width: 150px;
+}
+.pkmn_name, .title-statistics{
+	margin-left: 10px;
+}
+.pkmn_footer{
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	background: $bg-card;
+	padding: 10px;
+	a {
+		margin-left: 3px;
+		text-decoration:none;
+		color: $green;
+	}
+	img {
+		margin: 0 3px;
 	}
 }
