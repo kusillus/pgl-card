@@ -1,3 +1,112 @@
-<div>
-	hoooola
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PGL - CARD</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<!-- 
+	Si no funcionan las imagenes cambiar las rutas del archivo JS
+
+	1. Los nombres de los tipos de ataque deben ser en ingles y minuscula: water, electric, etc.
+	2. Para definir que stat potencia y debilita la habilidad de un pokemon escoge entre: stat_ps, stat_att, stat_def, stat_spa, stat_spd, stat_vel.
+	Ejemplo Modesta: sube (stat_buff:stat_spa), baja(stat_debuff:stat_att)
+	3. En el genero del pokemon debe ser gender:"F" - femenino, gender"M" - Masculino, gender:"N" - neutro.
+	4. En los Ev agrega numeros, si no debe ir EV, dejalo vacio ev_hp:""
+	5. La imagen del pokemon es su numero en la pokedex nacional poke_img: 382.
+
+	 -->
+	<div id="pkmn_slot_01" class="pkmn-slot" data-pkmn='{"level":"50","name":"Kyogre","poke_img":"382","gender":"F","type1":"water","type2":"none","ability":"Llovizna", "item":"Prisma azul", "item_img":"blue-orb","skill1":"Escaldar","skill1_c":"water","skill2":"Pulso Primigenio","skill2_c":"water","skill3":"Rayo Hielo","skill3_c":"ice","skill4":"Protección","skill4_c":"normal","hp":"207","att":"252","def":"30","spa":"100","spd":"200","vel":"134","nature":"Modesta","stat_buff":"stat_spa","stat_debuff":"stat_att","ev_hp":"10","ev_att":"10","ev_def":"15","ev_spa":"20","ev_spd":"","ev_vel":"50"}' >
+		<div class="pkmn-container">
+			<div class="pa2 pkmn_col_principal">
+				<div class="pkmn-header-card">
+					<div class="flex-align-center">
+						<img src="img/pokeball.svg">
+						<span class="pkmn_name"></span>
+					</div>
+					<div class="flex-align-center">
+						<div>
+							Lv.
+							<span class="pkmn_lv"></span>
+						</div>
+						<span class="pkmn-sex-icon">
+							<img class="pkmn_img_icon" src="">
+						</span>
+					</div>
+				</div>
+				<div class="pkmn-data-card">
+					<div class="pkmn-left">
+						<img id="" class="pkm-img" src="">
+						<div class="w_100 pkmn_types">
+							<span class="pkmn-type ty_1"></span>
+							<span id="ty_2" class="pkmn-type ty_2"></span>
+						</div>
+					</div>
+					<div class="pkmn-right">
+						<div class="pkmn-moves">
+							<div class="pkmn_move  move_one"></div>
+							<div class="pkmn_move move_two"></div>
+							<div class="pkmn_move move_three"></div>
+							<div class="pkmn_move move_four"></div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="pkmn-items-card">
+					<div class="w_100">
+						<div class="pkmn-ability">
+							<span class="pkmn-title-bold">Ability:</span><span class="pl2 pkmn_ability"></span>
+						</div>
+						<div class="pkmn-item">
+							<span class="pkmn-title-bold">Item:</span><span class="pl2 pkmn_item"></span>
+						</div>	
+					</div>
+					<div class="w_80px flex-align-center flex-justify-center pa3">
+						<img class="pkmn-item-img" src="">
+					</div>
+				</div>	
+			</div>
+			<div class="pa2 pkmn_col_principal">
+				<div class="pkmn-title-statistics">
+					<img src="img/new.svg">
+					<span class="title-statistics">Estadisticas de batalla</span>
+				</div>
+				<div class="pkmn-stats-card">
+					<div class="pkmn_col title_stats">
+						<div class="pkmn-title-bold"></div>
+						<div class="pkmn-title-bold stat_ps">PS</div>
+						<div class="pkmn-title-bold stat_att">Ataque</div>
+						<div class="pkmn-title-bold stat_def">Defensa</div>
+						<div class="pkmn-title-bold stat_spa">At. Esp</div>
+						<div class="pkmn-title-bold stat_spd">Def. Esp</div>
+						<div class="pkmn-title-bold stat_vel">Vel</div>
+					</div>
+					<div class="pkmn_col w_100 t_right">
+						<div class="pkmn-title-bold">BASE</div>
+						<div class="base_ps"></div>
+						<div class="base_att"></div>
+						<div class="base_def"></div>
+						<div class="base_spa"></div>
+						<div class="base_spd"></div>
+						<div class="base_vel"></div>
+					</div>
+					<div class="pkmn_col w_100 t_right">
+						<div class="pkmn-title-bold">EVS</div>
+						<div class="ev ev_hp"></div>
+						<div class="ev ev_att"></div>
+						<div class="ev ev_def"></div>
+						<div class="ev ev_spa"></div>
+						<div class="ev ev_spd"></div>
+						<div class="ev ev_vel"></div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="pkmn_footer">
+			Hecho con <img src="img/like.svg"> por <a href="https://kusillus.github.io/kusillus/" target="_blank">kusillus</a>
+		</div>		
+	</div>
+	<script src="index-min.js"></script>
+
+</body>
+</html>

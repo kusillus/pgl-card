@@ -2,6 +2,8 @@ $green: #67A72F;
 $white: #FFFFFF;
 $bg-card: #F6F6F6;
 $grey: #CCC;
+$orange: #EE5736;
+$purple: #753FB5;
 
 // Type table color
 $normal: #aa9;
@@ -14,7 +16,6 @@ $fighting:#b54;
 $poison:#a59;
 $ground:#db5;
 $flying:#89f;
-
 $psychic:#f59;
 $bug:#ab2;
 $rock:#ba6;
@@ -26,17 +27,21 @@ $fairy:#e9e;
 
 $title-color:#004689;
 
+
 body{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.pkmn-slot{
+	max-width: 600px;
+}
 .pkmn-container{
 	background: $bg-card;
 	display:flex;
 	flex-flow: row wrap;
 }
 .pkmn-header-card{
-	background-color: $green;
+	background-color: $orange;
 	color: $white;
 	display: flex;
 	justify-content: space-between;
@@ -78,26 +83,22 @@ body{
 .pa2{
 	padding: 5px;
 }
+.pkmn_types{
+	display: flex;
+	justify-content: space-around;
+}
 
 .pkmn-type{
-	font-size: 11px;
+	font-size: 10px;
 	border-radius: 4px;
-	padding: 1px 6px;
+	padding: 2px 7px;
 	box-sizing: border-box;
-	&.t_dragon{
-		color: $white;
-		background-color: $green;
-
-	}
-	&.t_flying{
-		color: $white;
-		background-color: $green;
-
-	}
+	color: $white;
 }
 .pkmn-data-card{
 	padding: 5px 0;
 	display: flex;
+	flex-flow: row wrap;
 }
 .pkmn-moves{
 	padding-left: 5px;
@@ -114,7 +115,7 @@ body{
 	}
 }
 .pkmn-right{
-	width:100%;
+	width:calc(100% - 100px);
 }
 .pkmn-items-card{
 	display: flex;
@@ -134,7 +135,7 @@ body{
 
 .pkmn-title-bold{
 	font-weight:bold;
-	color: $title-color;
+	color: #565656;
 }
 
 .pl2{
@@ -217,6 +218,63 @@ body{
 	}
 }
 
+.c_type_{
+	&normal{
+		background-color: $normal;
+	}
+	&fire{
+		background-color: $fire;
+	}
+	&water{
+		background-color: $water;
+	}
+	&electric{
+		background-color: $electric;
+	}
+	&grass{
+		background-color: $grass;
+	}
+	&ice{
+		background-color: $ice;
+	}
+	&fighting{
+		background-color: $fighting;
+	}
+	&poison{
+		background-color: $poison;
+	}
+	&ground{
+		background-color: $ground;
+	}
+	&flying{
+		background-color: $flying;
+	}
+	&psychic{
+		background-color: $psychic;
+	}
+	&bug{
+		background-color: $bug;
+	}
+	&rock{
+		background-color: $rock;
+	}
+	&gost{
+		background-color: $gost;
+	}
+	&dragon{
+		background-color: $dragon;
+	}
+	&dark{
+		background-color: $dark;
+	}
+	&steel{
+		background-color: $steel;
+	}
+	&fairy{
+		background-color: $fairy;
+	}
+}
+
 .pkmn-stats-card{
 	display: flex;
 	font-size: 12px;
@@ -243,10 +301,13 @@ body{
 	border-bottom: solid 2px;
 	display: flex;
 	align-items: center;
-	background-color: #67a72f;
+	background-color: $purple;
 }
 .w_100{
 	width: 100%;
+}
+.w_80px{
+	width: 80px;
 }
 .t_right{
 	text-align: right;
@@ -267,9 +328,39 @@ body{
 	a {
 		margin-left: 3px;
 		text-decoration:none;
-		color: $green;
+		color: $purple;
 	}
 	img {
 		margin: 0 3px;
+	}
+}
+
+.pkmn_col_principal{
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.buff-color{
+	color: $water!important;
+}
+.debuff-color{
+	color: $fire!important;
+}
+
+.pkmn_col{
+	.ev{
+		height: 14px;
+	}
+}
+
+.flex-justify-center{
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (max-width: 550px){
+	.pkmn_col_principal{
+		width: 100%;
+		box-sizing: border-box;
 	}
 }
